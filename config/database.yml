@@ -1,0 +1,8 @@
+development:
+  adapter: postgresql
+  database: incomeexpense
+  host: localhost 
+  username: postgres
+  password: media3
+  poll: 10
+  

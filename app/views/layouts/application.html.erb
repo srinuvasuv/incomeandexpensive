@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Development</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="full_wrap">
+	<div class="site_container">
+    	<div class="social_header_wrap">
+        	<div class="contact_blog">
+            	<p><span><%= image_tag 'fone_02.png' %></span>Call us:<a href="#">222234596</a></p>
+            </div><!--contact_blog-->
+            <div class="social_blg">
+            	<ul>
+                	<li><a href="#"><%= image_tag 'fb_03.png' %></a></li>
+                    <li><a href="#"><%= image_tag 'twitter_03.png' %></a></li>
+                    <li><a href="#">
+                    		<%= image_tag 'linkedin_03.png' %>
+                    </a></li>
+                    <li><a href="#">
+							<%= image_tag 'youtube_03.png' %>
+                    </a></li>
+                    
+                </ul>
+            </div><!--social_blg-->
+            <div class="clear_fix"></div>
+        </div><!--social_header_wrap-->
+    </div><!--site_container-->
+</div><!--full_wrap-->
+<div class="clear_fix"></div>
+<header class="full_wrap1">
+	<div class="site_container">
+    	<div class="header">
+        	<div class="logo">
+            	<a href=""><%= image_tag 'logo_03.png' %></a>
+            </div><!--logo-->
+            <div class="search_blg">
+            	
+                <div class="search_blg_right">
+                <% if user_signed_in? %>
+                	
+                  <%= link_to 'Edit profile', edit_user_registration_path,:class => "login" %> 
+                   <%= link_to "Logout", destroy_user_session_path, method: :delete,:class => "logout" %>
+                <% else %>
+                  <%= link_to "Login",user_session_path,:class => "login" %>
+                  <%= link_to "RegisterHere",new_user_registration_path,:class => "logout" %>
+                	 
+                <% end %>
+                    
+                </div><!--search_blg_right-->
+                <div class="clear_fix"></div>
+            </div><!--search_blg-->
+            <div class="clear_fix"></div>
+        </div><!--header-->
+    </div><!--site_container-->
+</header><!--full_wrap1-->
+<div class="clear_fix"></div>
+<nav class="full_wrap2">
+	<div class="site_container">
+      <div class="mobilemenu_icon"><img src="images/mobile_menu2.png"></div>
+    	<div class="navigation">
+        	<ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About I&E </a></li>
+                <li><a href="#">Success Stories</a></li>
+                <li><a href="#">Feedback Report</a></li>
+                <li><a href="#">Testmonials</a></li>
+                <li><a href="#">Toppers Club</a></li> 
+                <div class="clear_fix"></div>                       
+            </ul>
+        </div><!--navigation-->
+    </div><!--site_container-->
+</nav><!--full_wrap-->
+<div class="clear_fix"></div>
+<%= yield %>
+<div class="full_wrapper">
+ <footer class="site_container">
+   <ul class="footer_list">
+     
+     <li>
+      <h3>Recruiters</h3>
+      <ul>
+       <li><a href="#">Post a job</a></li>
+       <li><a href="#">Find out more</a></li>
+      </ul>
+     </li>
+     
+     <li>
+      <h3>Icome and expendituers</h3>
+      <ul>      
+     
+      <li><a href="#">expendituer alerts</a></li>
+      <li><a href="#">income alerts</a></li>
+      <li><a href="#">Update profile</a></li>
+      </ul>
+     </li>
+
+     <li>
+      <h3>Help centre</h3>
+      <ul>      
+      <li><a href="#">Terms and Conditions</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">FAQs</a></li>
+      <li><a href="#">Contact us</a></li>
+      </ul>
+     </li>
+
+
+     <li>
+      <h3>Recent Blog Posts</h3>
+      <p>Middle class jobs are being replaced by burger-flipping, retail sales, low-pay jobs...July 22,2015</p>
+      <div class="viewall"><a href="#">View all</a></div>
+     </li>
+     
+     <li>
+      
+      <%= image_tag "footerimg_18.png" %>
+     </li>
+     <div class="clear_fix"></div>
+   
+   </ul>
+ </footer>
+</div>
+
+<div class="full_wrapper">
+ <div class="site_container">
+   <div class="copyrighttxt">Copyright © 2015 SEI Jobs.com</div><!--copyrighttxt-->
+   <div class="socialicons">
+    <a href="#">
+    	<%= image_tag "social-icons_18.png" %>
+    	
+    </a>
+    <a href="#">
+    	
+    	<%= image_tag "social-icons_20.png" %>
+    </a>
+    <a href="#">
+       
+       <%= image_tag "social-icons_22.png" %>
+    </a>
+   </div><!--socialicons-->
+   <div class="clear_fix"></div>
+ </div><!--site_container-->
+</div><!--full_wrapper-->
+
+</body>
+</html>

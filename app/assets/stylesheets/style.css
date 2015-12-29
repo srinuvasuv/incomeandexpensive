@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************fonts**********************/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900);
+
+
+/******************fonts**********************/
+
+*						{ margin:0;padding:0;outline:0;}
+h1						{}
+h2						{}
+h3						{}
+h4						{}
+h5						{}
+h6						{}
+img						{ max-width:100%; height:auto; border:none;}
+body					{font-family: 'Roboto', sans-serif;font-size:14px;}
+p						{}
+a						{ text-decoration:none;}
+ul						{ list-style:none;}
+
+.menu_trigger			{ width:100%; float:left; text-align:center; display:none;}
+
+.clear_fix				{ clear:both; width:100%;}
+
+.full_wrapper			{ width:100%; }
+.full_wrap				{ width:100%; background-color:#3f3f3f; }
+.full_wrap1				{ width:100%;border-bottom:2px solid #009ddf;}
+.full_wrap2				{ width:100%; background-color:#3f3f3f; border-top:1px solid #fff; border-bottom:1px solid #fff; }
+.full_wrap3				{ width:100%; background:url(images/banner_bg_02.png) no-repeat, url(images/banner-border_shadow_03.png) bottom center no-repeat;border-bottom:1px solid #fff; min-height:386px; background-size:cover; }
+.site_container			{ max-width:1004px; margin:auto;}
+.site_container1		{ max-width:1227px; margin:auto;}
+.border_shadow          { background:url(images/bg-shadow_18.png) no-repeat bottom center; background-size:contain; height:43px; position:relative; bottom:2px; }
+
+.social_header_wrap		{ width:100%;}
+.contact_blog			{ float:left;bottom: 7px;position: relative;}
+.contact_blog p			{ color:#fff; font-size:12px;font-family: 'Roboto', sans-serif;}
+.contact_blog span		{ position: relative;top: 10px;}
+.contact_blog a			{ color:#febb12; font-size:12px;font-family: 'Roboto', sans-serif;padding-left: 5px;}
+.social_blg				{ float:right;}
+.social_blg>ul			{ float:right;}
+.social_blg>ul>li		{ float:left;padding: 4px 12px; border-left:1px solid #4e4e4e;}
+.social_blg>ul>li:nth-child(5n){ border-right:1px solid #4e4e4e;}
+
+.header					{ width:100%; padding:15px 0 10px;}
+.logo					{float:left;}
+.search_blg				{ float:right; width:75%;}
+.search_blg_left		{ padding:15px 0;float:left; width:83%;}
+.search_blg_right		{ float:right; width:25%; margin-top:20px;}
+.search_jobs			{ border:none; background-color:#f0efec; color:#979795;font-size:13px;font-family: 'Roboto', sans-serif; -webkit-border-top-left-radius: 7px;-webkit-border-bottom-left-radius: 7px;-moz-border-radius-topleft: 7px;-moz-border-radius-bottomleft: 7px;border-top-left-radius: 7px;border-bottom-left-radius: 7px; height:43px; border:1px solid #969696; width:61%;padding-left:2%; color:#999997; float:left; }
+.search_category		{ border:none; color:#979795;font-size:13px;font-family: 'Roboto', sans-serif; appearance:none;-moz-appearance:none;-webkit-appearance:none; background:#f0efec url(images/header_select_arw_03.png) right center no-repeat;height:45px;border-top:1px solid #969696;border-bottom:1px solid #969696;  width:29%;padding-left:1%;position: relative; right: 4px; border-left:1px solid #969696; color:#969694; float:left; }
+.search_btn				{ border:none;background:#3f3f3f url(images/search_icon_03.png) center no-repeat;-webkit-border-top-right-radius: 7px;-webkit-border-bottom-right-radius: 7px;-moz-border-radius-topright: 7px;-moz-border-radius-bottomright: 7px;border-top-right-radius: 7px;border-bottom-right-radius: 7px; height:45px; width:6%; position:relative;right:7px; top:0px; float:left; }
+.hire_talent			{ border:none; background:url(images/header_btn_strip_03.png) repeat; color:#fff; padding:6px 15px; display:block;font-weight:bold; margin-top:5px; float:right; font-size:15px; width:122px; }
+.job_seekers			{ border:none; background:url(images/header_btn_strip_03.png) repeat; color:#fff; padding:6px 10px;font-weight:bold;margin-top:5px; float:right; font-size:15px;width:122px;  }
+
+.navigation				{ width:100%;}
+.navigation>ul			{}
+.navigation>ul>li		{ float:left;  background:url(images/list_border_03.png) right center no-repeat;  }
+.navigation>ul>li>a		{ color:#fff; font-size:13px;font-family: 'Roboto', sans-serif;padding:12px 23px; display:block;}
+.navigation>ul>li:nth-child(8)       { background:none; }
+.navigation>ul>li:nth-child(8) a{ background:none;padding-right:0;}
+.navigation>ul>li:first-child a{ padding-left:0;}
+
+.banner_blg				{ width:100%; padding:20px 0  30px;}
+.banner_blg_left		{ width:30%;float:left;}
+.banner_blg_right		{ width:70%;float:right; position:relative; text-align:right; }
+.banner_left_top		{ width:100%; position:relative;}
+.pos					{ position:absolute;top:65px;}
+.bannertxt              { position:absolute; top:155px; text-align:center; width:100%; }
+.pos h1					{ color:#fff;  font-size:28.64px; font-weight:bold;padding:0 24px;text-transform: uppercase;}
+.pos p					{ color:#fff; font-size:16px; padding:0 24px;}
+.banner_left_dwn		{ width:100%; position:relative; margin-top:8px;}
+.pos1					{ position:absolute;text-transform: uppercase;top: 95px;}
+.pos1 h1				{ color:#fff;  font-size:22px; font-weight:bold; padding:0 24px;}
+.pos1 p					{ color:#fff; font-size:13px; padding:0 24px;}
+.posabs                 { position:relative; bottom:55px; }
+.blackbg                { background-color:#030303; padding:10px; color:#fff; font-size:16px; max-width:260px; text-align:justify;  margin:0px 18%;  }
+.upload-file-container {   background:url(images/uploadcv_07.png) no-repeat;  height:43px;  width:280px; margin:0px 18%; }
+.upload-file-container input {    filter: alpha(opacity=0);   opacity: 0;   height:43px;   width:280px; }
+.bannerimg             { border:3px solid #fff; }
+footer                 { border-top:1px solid #bfbfbf; border-bottom:1px solid #bfbfbf; padding:18px 0px; }
+.copyrighttxt          { float:left; color:#9b9b9b; font-size:13px; margin:10px 0px; }
+.socialicons           { float:right; margin:10px 0px; }
+.footer_list           { }
+.footer_list>li        { float:left;  }
+.footer_list>li:nth-child(1)        { width:12%; }
+.footer_list>li:nth-child(2)        { width:12%;  }
+.footer_list>li:nth-child(3)        { width:14%;  }
+.footer_list>li:nth-child(4)        { width:20%;  }
+.footer_list>li:nth-child(5)        {  width:40%; float:right; }
+.footer_list h3        { font-size:17px; font-weight:bold; color:#335354; margin-bottom:10px; font-family: 'Roboto', sans-serif; }
+.footer_list>li>ul     { }
+.footer_list>li>ul>li  { font-size:12px; margin-top:5px; font-weight:500; }
+.footer_list>li>ul>li a{ color:#696969;  }
+.footer_list>li p      { font-size:12px; color:#696969; line-height:19px; margin-top:10px; }
+.viewall               { }
+.viewall a             { color:#0082c7; font-size:12px; text-decoration:underline; }
+.experiencessearch     { float:left; width:49.5%; }
+.freshersssearch       { float:right; width:49.5%;  }
+.searchingfullwrap     {  border:1px solid #b3afaf; margin:13px 0px;  }
+.searches_list         { }
+.searches_list li      { padding:18px 0px;  }
+.searches_list li:nth-child(1)      { padding:8px 0px;  }
+
+.searches_list li:nth-child(odd)  { background-color:#f5f5f5; }
+.name                  { float:left; width:20%;  color:#01499a; font-size:13px; text-align:left; font-weight:500; padding:0px 2%; }
+.education             { float:left; width:20%;  color:#ff0000; font-size:13px; text-align:center; font-weight:500; }
+.skills                { float:left; width:20%;  color:#000; font-size:13px; text-align:center;font-weight:500; }
+.expectation           { float:left; width:18%;  color:#000;font-size:13px; text-align:center; font-weight:500; }
+.location              { float:left; width:18%;  color:#000;font-size:13px; text-align:center;font-weight:500;  }
+.titlewrap             { background-color:#e7e7e7; padding:8px 0px; }
+.viewmore              { margin-top:30px; margin-bottom:12px; text-align:right; }
+.viewmore a            { color:#0082c7; font-weight:bold; font-size:14px; text-decoration:underline; padding:0px 15px; }
+.searchexperience      { background-color:#009bde; height:40px; font-size:16px; font-weight:bold; color:#fff;  }
+.imgicon               { background-color: #096c96;    padding: 10px 10px;   text-align:center;  }
+.imgicon1              { background-color: #096c96;    padding:10px 10px;   text-align:center; position:relative; top:6px;  }
+.heading               { padding-top:6px; }
+.heading1              { padding-top:6px; position:relative; top:6px; }
+.imgicon img           { position:relative; top:7px; }
+.imgicon1 img          { position:relative; top:5px; }
+.company               { float:left; width:25%;  color:#000; font-size:13px; text-align:left; font-weight:600; padding-left:4%;; }
+.profile               { float:left; width:20%;  color:#ff0000; font-size:13px; text-align:center; font-weight:500; }
+.salary                { float:left; width:15%;  color:#000; font-size:13px; text-align:center;font-weight:500; }
+.locations             { float:left; width:18%;  color:#000;font-size:13px; text-align:center;font-weight:500;  }
+.link                  { float:left; width:18%;  color:#000;font-size:13px; text-align:center; font-weight:500; }
+.link input[type="submit"] { background:url(images/btnslice_26.png) repeat-x; padding:4px 10px; font-weight:500; color:#fff; border:none; }
+.openings              { float:left; width:31%;  color:#fff; font-size:16px; text-align:left; font-weight:bold; }
+.all                   { float:left; width:15%;  color:#fff; font-size:14px; text-align:center; font-weight:400; padding-top:12px; }
+.engineering           { float:left; width:20%;  color:#fff; font-size:14px; text-align:center;font-weight:400; padding-top:12px;}
+.mba                   { float:left; width:15%;  color:#fff;font-size:14px; text-align:center;font-weight:400; padding-top:12px; }
+.graduates             { float:left; width:19%;  color:#fff;font-size:14px; text-align:center; font-weight:400;padding-top:12px; }
+.searches_list1        { }
+.searches_list1 li     { padding:10px 0px;  }
+.searches_list1 li:nth-child(odd)  { background-color:#f5f5f5; border-bottom:1px solid #eaebeb; border-top:1px solid #eaebeb; }
+.searches_list2        { }
+.searches_list2 li     { padding:10px 0px;  }
+.campus                { float:left; width:30%;  color:#000; font-size:14px; text-align:left; font-weight:500; padding:0px 2%; }
+.date                  { float:left; width:23%;  color:#000; font-size:14px; text-align:center; font-weight:500; }
+.locations1            { float:left; width:23%;  color:#000; font-size:14px; text-align:center;font-weight:500; }
+.jobtaker              { float:left; width:20%;  color:#000;font-size:14px; text-align:center;font-weight:500; }
+.headingwrap2          { background-color:#f2f3f3; padding:18px 0px; }
+.campusevents          { float:left; width:54.5%;border:1px solid #b3afaf; margin:13px 0px; }
+.testimonials          { float:right; width:44%;border:1px solid #b3afaf; margin:13px 0px; }
+.testimonialtxt        { padding:20px 20px; }
+.testimonialtxt p      { font-size:14px; color:#000; line-height:20px; margin-top:10px; }
+.readmore              { }
+.readmore a            { color:#1a658d; text-decoration:underline; }
+.viewmore1             { margin-top:41px; margin-bottom:10px; }
+.viewmore1 a           { color:#0082c7; font-weight:bold; font-size:13px; text-decoration:underline; }
+.mobilemenu_icon       { display:none; }
+.headingleft           { float:left; }
+.textboxwrap           { float:right; padding:5px 10px; }
+.textboxwrap input[type="text"]          { background-color:#fff; height:28px; padding:0px 10px; border:none;   }
+.jobsearch             { }
+.jobsearch h2          { color:#335354; font-size:20px; font-weight:800; }
+.categort_list         { display:none; }
+.mobile_menu           { display:none; }
+
+.categort_list1         { display:none; }
+.mobile_menu1           { display:none; }
+
+/*custom styles*/
+.login {background-color: #009BDE;padding: 15px;border-radius: 6px;}
+.logout {background-color: #009BDE;padding: 15px;border-radius: 6px;}
+.signup_wrap { width:100%;}
+.signup { width:50%; margin:auto;padding: 64px;}
+.txtbox { padding: 10px 67px;border-radius: 3px;border: 1px solid #B0AEAE; margin-top: 15px; }
+.field { margin-top: 15px; }
+.forgetpwd{ position: relative; top: -28px;left: 182px;  }
