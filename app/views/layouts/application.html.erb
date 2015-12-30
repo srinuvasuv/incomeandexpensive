@@ -40,6 +40,7 @@
             <div class="search_blg">
             	
                 <div class="search_blg_right">
+               
                 <% if user_signed_in? %>
                 	
                   <%= link_to 'Edit profile', edit_user_registration_path,:class => "login" %> 
@@ -69,6 +70,14 @@
                 <li><a href="#">Feedback Report</a></li>
                 <li><a href="#">Testmonials</a></li>
                 <li><a href="#">Toppers Club</a></li> 
+              <% if !current_user.nil?  %>
+                <li>
+                  <%= link_to 'Add Income',home_addincome_path %>
+                </li>
+                <li>
+                  <%= link_to 'Add Expenses',home_addincome_path %>
+                </li>
+              <% end %>
                 <div class="clear_fix"></div>                       
             </ul>
         </div><!--navigation-->

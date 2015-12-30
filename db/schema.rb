@@ -11,10 +11,56 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151228123318) do
+ActiveRecord::Schema.define(version: 20151230111059) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "expensecategories", force: :cascade do |t|
+    t.string   "expensesource"
+    t.text     "desc"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "amount"
+  end
+
+  create_table "expenses", force: :cascade do |t|
+    t.integer  "expensecategory_id"
+    t.string   "amount"
+    t.integer  "user_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  create_table "expensesources", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "income_categories", force: :cascade do |t|
+    t.string   "incomesource"
+    t.text     "desc"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "amount"
+  end
+
+  create_table "incomes", force: :cascade do |t|
+    t.integer  "incomecategory_id"
+    t.string   "amount"
+    t.integer  "user_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "incomesources", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  expensesource: MyString
+  desc: MyText
+  user_id: 1
+
+two:
+  expensesource: MyString
+  desc: MyText
+  user_id: 1

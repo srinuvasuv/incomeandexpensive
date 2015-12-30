@@ -1,0 +1,27 @@
+<div class="signup_wrap">
+  <div class="site_container">
+    <div class="signup">
+    	<%= form_for(@addincome,:url => home_addincomecreate_path) do |f| %>  
+				
+			<div class="field">
+               <label><%= f.label :source  %><br /></label>
+               <% @source = IncomeCategory.select('incomesource','id').where("user_id =?",current_user.id) %>
+
+              <%= f.select :incomecategory_id,options_for_select( @source.all.collect { |c|[c.incomesource,c.id ] }),{:prompt => "Select category"},:id => "select-location", :class => "txtbox" %>
+            </div>
+          
+            <div class="field">
+               <label><%= f.label :amount %><br /></label>
+               <%= f.text_field :amount,:class => "txtbox" %>
+            </div>
+            
+            <%= f.hidden_field :user_id,:value => current_user.id  %>
+            <div class="field">
+               
+               <%= f.submit "submit",:class => "txtbox" %>
+            </div>
+
+    	<% end %>
+    </div>
+  </div>
+</div>

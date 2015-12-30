@@ -165,6 +165,6 @@ footer                 { border-top:1px solid #bfbfbf; border-bottom:1px solid #
 .logout {background-color: #009BDE;padding: 15px;border-radius: 6px;}
 .signup_wrap { width:100%;}
 .signup { width:50%; margin:auto;padding: 64px;}
-.txtbox { padding: 10px 67px;border-radius: 3px;border: 1px solid #B0AEAE; margin-top: 15px; }
+.txtbox { padding: 10px;border-radius: 3px;border: 1px solid #B0AEAE; margin-top: 15px;width: 300px; }
 .field { margin-top: 15px; }
-.forgetpwd{ position: relative; top: -28px;left: 182px;  }
+
