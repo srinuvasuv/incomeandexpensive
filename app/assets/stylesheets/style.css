@@ -167,4 +167,20 @@ footer                 { border-top:1px solid #bfbfbf; border-bottom:1px solid #
 .signup { width:50%; margin:auto;padding: 64px;}
 .txtbox { padding: 10px;border-radius: 3px;border: 1px solid #B0AEAE; margin-top: 15px;width: 300px; }
 .field { margin-top: 15px; }
+.vertical { background-color:rgb(240, 236, 236);height: 590px;margin-bottom: 14px;width: 20%;float: left; }
+.tabs {font-size: 21px;text-align: center;padding-top: 42px;}
+.transaction {width:100%; float:left;  }
+.verticalside {float: left;width: 80%;padding-top: 40px;}
+.addincome{ float: right; }
+.form_for{padding-left: 25%;}
+.username{width: 50%;padding-left: 33px;float:left;}
+.incomeinfo{padding-left: 93px;width: 80%;padding-top: 70px;  }
+.totalincome{float:left;}
+table {
+    border-collapse: collapse;
+}
 
+table, th, td {
+    border: 1px solid black;
+    
+}

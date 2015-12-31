@@ -1,12 +1,12 @@
 <div class="signup_wrap">
   <div class="site_container">
     <div class="signup">
-    	<%= form_for( @category,:url => home_incomecategorycreate_path) do |f| %>  
+    <%= form_for( @expendcategory,:url => home_expensecategorycreate_path) do |f| %>  
 				
-			<div class="field">
+			     <div class="field">
                <label><%= f.label :source  %><br /></label>
-               <%= f.select :incomesource,options_for_select( Incomesource.all.collect { |c|[c.name,c.name ] }),{:prompt => "Select source"},:id => "select-location", :class => "txtbox" %>
-      </div>
+               <%= f.select :expensesource,options_for_select( Expensesource.all.collect { |c|[c.name,c.name ] }),{:prompt => "Select source"},:id => "select-location", :class => "txtbox" %>
+           </div>
           
             <div class="field">
                <label><%= f.label :Description %><br /></label>

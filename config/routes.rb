@@ -7,6 +7,13 @@ Rails.application.routes.draw do
   post 'home/incomecategorycreate'
   get 'home/addincome'
   post 'home/addincomecreate'
+  get 'home/transaction'
+  get 'home/income'
+  get 'home/expendituers'
+  get 'home/addexpenditures'
+  post 'home/expendituerscreate'
+  get 'home/expensecategory'
+  post 'home/expensecategorycreate'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
