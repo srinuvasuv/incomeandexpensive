@@ -38,7 +38,16 @@ class HomeController < ApplicationController
   def expensecategory
 
     @expendcategory = Expensecategory.new()
+
     
+  end
+
+  def expensecategorycreate  
+
+    @expendcategory = Expensecategory.new(expendcategory_params)
+    if @expendcategory.save
+      redirect_to home_expensecategory_path 
+    end
   end
 
   def addexpenditures
@@ -48,7 +57,11 @@ class HomeController < ApplicationController
   end
 
   def expendituerscreate
-
+    
+    @expendituers = Expense.new(expendituers_params)
+    if @expendituers.save
+      redirect_to home_expendituers_path  
+    end
   end
 
   private
@@ -65,7 +78,11 @@ class HomeController < ApplicationController
    end
 
    def expendcategory_params
-      
+      params.require('expensecategory').permit(:expensesource,:desc,:user_id)
+   end
+
+   def expendituers_params
+      params.require('expense').permit(:expensecategory_id,:amount,:user_id)
    end
 
 

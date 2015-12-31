@@ -3,10 +3,42 @@
    
      <%= render :partial => "sidebar" %>
      <div class="verticalside">
+        <div class="username">
+         	<%= current_user.name %>
+         	
+         	
+         </div>
+         
          <div class="addincome">
              <%= link_to "Add Expendituers",home_addexpenditures_path %>
          </div>
-     </div>
+        
+         
+         <div class="incomeinfo">
+         	<table border="1" style="width:100%;height:100px;">
+         	    <tr>
+         		<th>Source of Expendituers </th>
+         		<th>Income</th>
+         		<th>Date</th>
+         		</tr>
+                
+                <% @amount = 0 %>
+                <% current_user.expenses.each do |f| %>
+         		<tr>
+                    
+         			<td align="center"> <%= Expensecategory.find(f.expensecategory_id).expensesource %> </td>
+         			<td align="center"><%= f.amount %></td>
+         			<td align="center"><%= f.created_at %></td>
+                        <% @amount =  @amount + f.amount.to_f  %>
+                        
+         		</tr>
+                <% end %>
+                
+         	</table>
+         </div>
+         <div class="incomeinfo">
+             Total Income:<%= @amount %>
+         </div>
    
   </div>
 </div>

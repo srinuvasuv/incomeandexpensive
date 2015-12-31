@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :income_categories
   has_many :incomes
+  has_many :expenses
 end
