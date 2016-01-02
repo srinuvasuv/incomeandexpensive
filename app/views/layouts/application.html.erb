@@ -68,8 +68,11 @@
                 <li><a href="#">About I&E </a></li>
                 <li><a href="#">Success Stories</a></li>
                 <li><a href="#">Feedback Report</a></li>
-                <li><a href="#">Testmonials</a></li>
+                
               <% if !current_user.nil?  %>
+                <li>
+                  <%= link_to 'Dashboard',home_transaction_path %>
+                </li>
                 <li>
                   <%= link_to 'Add Income category',home_incomecategory_path %>
                 </li>
