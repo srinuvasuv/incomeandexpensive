@@ -23,10 +23,10 @@
          		</tr>
                 
                 <% @amount = 0 %>
-                <% current_user.expenses.each do |f| %>
+                <% current_user.transactions.where("type =?","Expense").each do |f| %>
          		<tr>
                     
-         			<td align="center"> <%= Expensecategory.find(f.expensecategory_id).expensesource %> </td>
+         			<td align="center"> <%= Category.find(f.category_id).source %> </td>
          			<td align="center"><%= f.amount %></td>
          			<td align="center"><%= f.created_at %></td>
                         <% @amount =  @amount + f.amount.to_f  %>

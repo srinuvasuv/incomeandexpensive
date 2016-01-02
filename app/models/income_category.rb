@@ -1,5 +1,4 @@
-class IncomeCategory < ActiveRecord::Base
-	belongs_to :users
-	belongs_to :incomes
+class IncomeCategory < Category
+	
 	
 end

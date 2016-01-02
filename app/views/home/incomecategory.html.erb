@@ -5,15 +5,15 @@
 				
 			<div class="field">
                <label><%= f.label :source  %><br /></label>
-               <%= f.select :incomesource,options_for_select( Incomesource.all.collect { |c|[c.name,c.name ] }),{:prompt => "Select source"},:id => "select-location", :class => "txtbox" %>
+        <%= f.text_field :source, autofocus: true, :class => "txtbox" %>
       </div>
           
             <div class="field">
                <label><%= f.label :Description %><br /></label>
-               <%= f.text_area :desc, autofocus: true, :class => "txtbox" %>
+        <%= f.text_area :desc, autofocus: true, :class => "txtbox" %>
             </div>
             
-            <%= f.hidden_field :user_id,:value => current_user.id  %>
+        <%= f.hidden_field :user_id,:value => current_user.id  %>
             <div class="field">
                
                <%= f.submit "submit",:class => "txtbox" %>

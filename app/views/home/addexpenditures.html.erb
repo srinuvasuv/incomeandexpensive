@@ -8,9 +8,9 @@
 				
 			      <div class="field">
                <label><%= f.label :source  %><br /></label>
-               <% @source = Expensecategory.select('expensesource','id').where("user_id =?",current_user.id) %>
+               <% @source = current_user.categories.where("type =?","Expensecategory") %>
 
-              <%= f.select :expensecategory_id,options_for_select( @source.all.collect { |c|[c.expensesource,c.id ] }),{:prompt => "Select category"},:id => "select-location", :class => "txtbox" %>
+              <%= f.select :category_id,options_for_select( @source.all.collect { |c|[c.source,c.id ] }),{:prompt => "Select category"},:id => "select-location", :class => "txtbox" %>
             </div>
           
             <div class="field">

@@ -3,7 +3,46 @@
    
      <%= render :partial => "sidebar" %>
      <div class="verticalside">
+         <div class="username">
+         	<%= current_user.name %>
+         	
+         	
+         </div>
          
+       
+         <div class="incomeinfo">
+         	<table border="1" style="width:100%;height:100px;">
+         	    <tr>
+         		<th>source</th>
+         		<th>Transaction Money</th>
+         		<th>Type</th>
+         		<th>Date</th>
+         		</tr>
+                <% current_user.transactions.each do |f| %>
+         		<tr>
+                    
+         			<td align="center"> 
+                       
+                       <%= Category.find(f.category_id).source %> 
+                    </td>
+         			<td align="center">
+         				<%= f.amount %>
+         			</td>
+         			<td align="center">
+         				<%= f.type %>
+         			</td>
+         			<td align="center">
+         				<%= f.created_at %>
+         			</td>
+                       
+                        
+         		</tr>
+         		<% end %>
+                
+                
+         	</table>
+         </div>
+       
      </div>
    
   </div>

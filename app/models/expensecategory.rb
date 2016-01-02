@@ -1,4 +1,4 @@
-class Expensecategory < ActiveRecord::Base
+class Expensecategory < Category
 	belongs_to :users
 	belongs_to :incomes
 	

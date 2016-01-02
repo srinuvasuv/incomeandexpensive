@@ -67,22 +67,22 @@ class HomeController < ApplicationController
   private
    def incomecategory_params
    			
-   		params.require('income_category').permit(:incomesource,:desc,:user_id)
+   		params.require('income_category').permit(:source,:desc,:user_id)
 
    end
 
    def income_params
 
-      params.require('income').permit(:incomecategory_id,:amount,:user_id)
+      params.require('income').permit(:category_id,:amount,:user_id)
 
    end
 
    def expendcategory_params
-      params.require('expensecategory').permit(:expensesource,:desc,:user_id)
+      params.require('expensecategory').permit(:source,:desc,:user_id)
    end
 
    def expendituers_params
-      params.require('expense').permit(:expensecategory_id,:amount,:user_id)
+      params.require('expense').permit(:category_id,:amount,:user_id)
    end
 
 

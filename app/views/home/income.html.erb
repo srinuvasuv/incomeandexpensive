@@ -21,10 +21,14 @@
          		</tr>
                 
                 <% @amount = 0 %>
-                <% current_user.incomes.each do |f| %>
+                 
+                <% current_user.transactions.where("type =?","Income").each do |f| %>
          		<tr>
                     
-         			<td align="center"> <%= IncomeCategory.find(f.incomecategory_id).incomesource %> </td>
+         			<td align="center"> 
+                       
+                        <%= Category.find(f.category_id).source %> 
+                    </td>
          			<td align="center"><%= f.amount %></td>
          			<td align="center"><%= f.created_at %></td>
                         <% @amount =  @amount + f.amount.to_f  %>

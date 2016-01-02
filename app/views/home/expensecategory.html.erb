@@ -5,7 +5,7 @@
 				
 			     <div class="field">
                <label><%= f.label :source  %><br /></label>
-               <%= f.select :expensesource,options_for_select( Expensesource.all.collect { |c|[c.name,c.name ] }),{:prompt => "Select source"},:id => "select-location", :class => "txtbox" %>
+                <%= f.text_field :source, autofocus: true, :class => "txtbox" %>
            </div>
           
             <div class="field">
