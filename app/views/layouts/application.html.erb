@@ -69,13 +69,12 @@
                 <li><a href="#">Success Stories</a></li>
                 <li><a href="#">Feedback Report</a></li>
                 <li><a href="#">Testmonials</a></li>
-                <li><a href="#">Toppers Club</a></li> 
               <% if !current_user.nil?  %>
                 <li>
-                  <%= link_to 'Add Income',home_addincome_path %>
+                  <%= link_to 'Add Income category',home_incomecategory_path %>
                 </li>
                 <li>
-                  <%= link_to 'Add Expenses',home_addincome_path %>
+                  <%= link_to 'Add Expenses category',home_expensecategory_path %>
                 </li>
               <% end %>
                 <div class="clear_fix"></div>                       
