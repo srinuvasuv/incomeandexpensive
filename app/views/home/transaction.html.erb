@@ -18,26 +18,29 @@
          		<th>Type</th>
          		<th>Date</th>
          		</tr>
-                <% current_user.transactions.each do |f| %>
-         		<tr>
+                
+               <% Transaction.includes(:category).where('user_id=?', current_user.id).each do |f| %> 
+                <tr>
                     
-         			<td align="center"> 
+                    <td align="center"> 
                        
-                       <%= Category.find(f.category_id).source %> 
+                       <%= f.category.source %> 
                     </td>
-         			<td align="center">
-         				<%= f.amount %>
-         			</td>
-         			<td align="center">
-         				<%= f.type %>
-         			</td>
-         			<td align="center">
-         				<%= f.created_at %>
-         			</td>
+                    <td align="center">
+                        <%= f.amount %>
+                    </td>
+                    <td align="center">
+                        <%= f.type %>
+                    </td>
+                    <td align="center">
+                        <%= f.date %>
+                    </td>
                        
                         
-         		</tr>
-         		<% end %>
+                </tr>
+                <% end %>
+                
+                
                 
                 
          	</table>

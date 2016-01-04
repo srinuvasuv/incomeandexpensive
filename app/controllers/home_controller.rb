@@ -11,7 +11,10 @@ class HomeController < ApplicationController
   		
   	@income = IncomeCategory.new(incomecategory_params)
   	if @income.save
-  		redirect_to home_incomecategory_path	
+  		redirect_to home_incomecategory_path, :flash => {:notice => "IncomeCategory added sucessfully"}	
+    else
+      redirect_to home_incomecategory_path,  :flash => {:error => @income.errors.full_messages
+ }
   	end
   end
 
@@ -23,7 +26,13 @@ class HomeController < ApplicationController
     
       @income = Income.new(income_params)
       if @income.save
-        redirect_to home_income_path
+
+        redirect_to home_income_path, :flash => {:notice => "Income added sucessfully"}
+      else
+        
+      redirect_to home_addincome_path,  :flash => {:error =>  @income.errors.full_messages
+ }
+
       end
   end
 
@@ -46,7 +55,10 @@ class HomeController < ApplicationController
 
     @expendcategory = Expensecategory.new(expendcategory_params)
     if @expendcategory.save
-      redirect_to home_expensecategory_path 
+      redirect_to home_expensecategory_path, :flash => {:notice => "ExpendituersCategory added sucessfully"}   
+    else
+      redirect_to home_expensecategory_path ,  :flash => {:error => @expendcategory.errors.full_messages
+ }
     end
   end
 
@@ -60,7 +72,9 @@ class HomeController < ApplicationController
     
     @expendituers = Expense.new(expendituers_params)
     if @expendituers.save
-      redirect_to home_expendituers_path  
+      redirect_to home_expendituers_path, :flash => {:notice => "Expendituers added sucessfully"}  
+    else
+      redirect_to home_addexpenditures_path,:flash => {:error =>  @expendituers.errors.full_messages}
     end
   end
 
@@ -73,7 +87,7 @@ class HomeController < ApplicationController
 
    def income_params
 
-      params.require('income').permit(:category_id,:amount,:user_id)
+      params.require('income').permit(:category_id,:amount,:user_id,:date)
 
    end
 
@@ -82,7 +96,7 @@ class HomeController < ApplicationController
    end
 
    def expendituers_params
-      params.require('expense').permit(:category_id,:amount,:user_id)
+      params.require('expense').permit(:category_id,:amount,:user_id,:date)
    end
 
 

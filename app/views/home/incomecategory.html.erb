@@ -1,6 +1,19 @@
 <div class="signup_wrap">
   <div class="site_container">
     <div class="signup">
+      <% if !flash[:notice].nil? %>
+           <div class="notice"> <%= flash[:notice] %> </div>
+    <% end %>
+     <div class="error" style="text-align: left;"> 
+      <%
+          if !flash[:error].nil? 
+
+      %>
+          <% flash[:error].each do |f| %>
+              <%= f %> </br>
+          <% end %>
+      <% end %>
+    </div>
     	<%= form_for( @category,:url => home_incomecategorycreate_path) do |f| %>  
 				
 			<div class="field">

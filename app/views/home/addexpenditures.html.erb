@@ -3,6 +3,16 @@
      <%= render :partial => "sidebar" %>
     
     <div class="verticalside">
+    <div class="error"> 
+      <%
+          if !flash[:error].nil? 
+
+      %>
+          <% flash[:error].each do |f| %>
+              <%= f %> </br>
+          <% end %>
+      <% end %>
+    </div>
       <div class="form_for">
     	<%= form_for(@expendituers,:url => home_expendituerscreate_path) do |f| %>  
 				
@@ -16,6 +26,10 @@
             <div class="field">
                <label><%= f.label :amount %><br /></label>
                <%= f.text_field :amount,:class => "txtbox" %>
+            </div>
+            <div class="field">
+               <label><%= f.label :date %><br /></label>
+               <%= f.date_field :date,:class => "txtbox" %>
             </div>
             
             <%= f.hidden_field :user_id,:value => current_user.id  %>
